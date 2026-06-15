@@ -24,7 +24,15 @@ IMDB_TITLE_TYPES = ["movie", "tvSeries", "tvMiniSeries"]
 
 
 def export_titles(con: duckdb.DuckDBPyConnection) -> None:
-    """Export the filtered titles table to titles.basics.csv."""
+    """
+    Export the filtered titles table to titles.basics.csv.
+
+    .. args:
+        con: A DuckDB connection with the title_basics table built.
+
+    .. returns:
+        None
+    """
     output_path = os.path.join(IMDB_DIR, "titles.basics.csv")
     con.execute(f"""
         COPY title_basics
@@ -35,7 +43,15 @@ def export_titles(con: duckdb.DuckDBPyConnection) -> None:
 
 
 def export_ratings(con: duckdb.DuckDBPyConnection) -> None:
-    """Export the filtered ratings table to title.ratings.csv."""
+    """
+    Export the filtered ratings table to title.ratings.csv.
+
+    .. args:
+        con: A DuckDB connection with the title_ratings table built.
+
+    .. returns:
+        None
+    """
     output_path = os.path.join(IMDB_DIR, "title.ratings.csv")
     con.execute(f"""
         COPY title_ratings
@@ -46,7 +62,16 @@ def export_ratings(con: duckdb.DuckDBPyConnection) -> None:
 
 
 def build_titles_table(con: duckdb.DuckDBPyConnection, filename: Path) -> None:
-    """Create the filtered titles table."""
+    """
+    Create the filtered titles table.
+
+    .. args:
+        con: A DuckDB connection.
+        filename: The path to the title.basics.tsv.gz file.
+
+    .. returns:
+        None
+    """
     print(f"Building title_basics table from {filename}...")
     title_types = ", ".join(f"'{t}'" for t in IMDB_TITLE_TYPES)
     con.execute(
@@ -63,7 +88,16 @@ def build_titles_table(con: duckdb.DuckDBPyConnection, filename: Path) -> None:
 
 
 def build_ratings_table(con: duckdb.DuckDBPyConnection, filename: Path) -> None:
-    """Create the filtered ratings table corresponding to titles."""
+    """
+    Create the filtered ratings table corresponding to titles.
+
+    .. args:
+        con: A DuckDB connection.
+        filename: The path to the title.ratings.tsv.gz file.
+
+    .. returns:
+        None
+    """
     print(f"Building title_ratings table from {filename}...")
     con.execute(
         """
@@ -78,6 +112,15 @@ def build_ratings_table(con: duckdb.DuckDBPyConnection, filename: Path) -> None:
 
 
 def fetch_title_basics(with_cleanup: bool = False) -> None:
+    """
+    Download, build, and export the title.basics table.
+
+    .. args:
+        with_cleanup: Whether to remove the downloaded file after processing.
+
+    .. returns:
+        None
+    """
     titles_url = f"{BASE_URL}/title.basics.tsv.gz"
     titles_file: Path | None
 
@@ -100,6 +143,15 @@ def fetch_title_basics(with_cleanup: bool = False) -> None:
 
 
 def fetch_title_ratings(with_cleanup: bool = False) -> None:
+    """
+    Download, build, and export the title.ratings table.
+
+    .. args:
+        with_cleanup: Whether to remove the downloaded file after processing.
+
+    .. returns:
+        None
+    """
     ratings_url = f"{BASE_URL}/title.ratings.tsv.gz"
     ratings_file: Path | None
 

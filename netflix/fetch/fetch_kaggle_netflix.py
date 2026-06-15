@@ -21,6 +21,15 @@ api = KaggleApi()
 
 
 def main():
+    """
+    Download and unzip the Kaggle Netflix top 10 TV shows and films dataset.
+
+    This function authenticates with the Kaggle API, downloads the specified dataset,
+    and unzips it to the designated directory.
+
+    Raises:
+        Exception: If there is an error during authentication or dataset download.
+    """
     api.authenticate()
     api.dataset_download_files(DATASET, path=KAGGLE_DIR, unzip=True)
     print("Dataset downloaded successfully.")
