@@ -50,7 +50,7 @@ def build_titles_table(con: duckdb.DuckDBPyConnection, filename: Path) -> None:
     print(f"Building title_basics table from {filename}...")
     title_types = ", ".join(f"'{t}'" for t in IMDB_TITLE_TYPES)
     con.execute(
-        f""" # nosec B608
+        f"""
         CREATE OR REPLACE TABLE title_basics AS
         SELECT  *
         FROM    read_csv_auto(?, delim='\t')
