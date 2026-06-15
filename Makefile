@@ -136,6 +136,14 @@ python-requirements:
 	pip-compile requirements/in/local.in -o requirements/local.txt
 	pip-compile requirements/in/docker.in -o requirements/docker.txt
 
+python-fetch-data:
+	@echo "==============================================================================="
+	@echo "Fetching data from external APIs and saving to local files ..."
+	@echo "==============================================================================="
+	$(ACTIVATE_VENV) && python -m netflix.fetch.fetch_imdb && \
+	python -m netflix.fetch.fetch_kaggle_netflix && \
+	python -m netflix.fetch.fetch_kaggle_tmdb && \
+	python -m netflix.fetch.fetch_polti
 
 
 ######################

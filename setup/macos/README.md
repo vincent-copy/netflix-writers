@@ -1,9 +1,7 @@
-# Smarter Development Environment for macOS
+# Development Environment for macOS
 
-The Smarter developer environment is Docker based, which helps to abstract
-away many of the platform's run-time dependencies. However, there are
-still quite a few things you'll need to install in order to get your Smarter
-developer environment completely up and running.
+There are quite a few things you'll need to install in order to
+get your project environment completely up and running.
 
 ## Local System Dependencies
 

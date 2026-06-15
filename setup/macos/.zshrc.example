@@ -3,7 +3,7 @@
 #
 # IMPORTANT: use this .zshrc as a general template guide for MODIFYING YOUR EXISTING
 # .zshrc, not as a complete replacement. Your existing .zshrc very likely contains
-# settings that are unrelated to Smarter and which you currently need for other
+# settings that are unrelated to this project and which you currently need for other
 # projects.
 #
 # About Environment Variables for Compilation/Linking:

@@ -33,6 +33,7 @@ def main():
     api.authenticate()
     api.dataset_download_files(DATASET, path=KAGGLE_DIR, unzip=True)
     print("Dataset downloaded successfully.")
+    print("-" * 40)
 
 
 if __name__ == "__main__":

@@ -3,9 +3,9 @@
 # Author: Lawrence McDaniel https://lawrencemcdaniel.com
 # Date: 2026-06-26
 #
-# setup.sh — macOS Environment Setup for Smarter Project
+# setup.sh — macOS Environment Setup for netflix-writers Project
 #
-# This script verifies and installs required development tools for the Smarter project on macOS.
+# This script verifies and installs required development tools for the netflix-writers project on macOS.
 # It checks for Xcode Command Line Tools, Homebrew, and Docker Desktop, and installs essential
 # packages and libraries via Homebrew.
 #

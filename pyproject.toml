@@ -1,16 +1,14 @@
 [project]
-name = "Smarter"
+name = "netflix-writers"
 version = "9999.9999.9999.dev9999"
-requires-python = ">=3.10"
-description = "Smarter: a declarative AI resource management platform"
+requires-python = ">=3.12"
+description = "Netflix Writers: An AI-powered storytelling assistant for content creators."
 authors = [{ name = "Lawrence McDaniel", email = "lpm0073@gmail.com" }]
 license = { file = "LICENSE" }
-keywords = ["AI", "API", "Python", "Kubernetes", "Cloud", "Management"]
+keywords = ["AI", "Kaggle", "Python"]
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
@@ -18,9 +16,6 @@ classifiers = [
     "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
     "Operating System :: POSIX :: Linux",
     "Intended Audience :: Developers",
-    "Framework :: Django",
-    "Framework :: Django REST framework",
-    "Topic :: Software Development :: Libraries :: Application Interfaces",
     "Topic :: Software Development :: Libraries :: API",
     "Natural Language :: English",
     "Development Status :: 4 - Beta"
@@ -42,7 +37,7 @@ profile = "black"
 
 [tool.black]
 line-length = 120
-target-version = ['py312']
+target-version = ['py313']
 include = '\.pyi?$'
 exclude = '''
 /(
@@ -59,12 +54,9 @@ exclude = '''
   | build
   | dist
   | __pypackages__
-  | staticfiles
   |.pypi_cache
   | .pytest_cache
   | .coverage
-  | keen_v3.0.6
-  | mysql-data
   | htmlcov
   | .eggs
   | .idea
