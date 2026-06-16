@@ -140,10 +140,13 @@ python-fetch-data:
 	@echo "==============================================================================="
 	@echo "Fetching data from external APIs and saving to local files ..."
 	@echo "==============================================================================="
-	$(ACTIVATE_VENV) && python -m netflix.fetch.fetch_imdb && \
-	python -m netflix.fetch.fetch_kaggle_netflix && \
-	python -m netflix.fetch.fetch_kaggle_tmdb && \
-	python -m netflix.fetch.fetch_polti
+	$(ACTIVATE_VENV) && python -m netflix.fetch
+
+python-build-dataset:
+	@echo "==============================================================================="
+	@echo "Building dataset from fetched data ..."
+	@echo "==============================================================================="
+	$(ACTIVATE_VENV) && python -m netflix.fetch.dataset
 
 
 ######################

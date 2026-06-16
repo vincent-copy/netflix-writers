@@ -1,6 +1,6 @@
 [project]
 name = "netflix-writers"
-version = "9999.9999.9999.dev9999"
+version = "0.0.1"
 requires-python = ">=3.12"
 description = "Netflix Writers: An AI-powered storytelling assistant for content creators."
 authors = [{ name = "Lawrence McDaniel", email = "lpm0073@gmail.com" }]
@@ -20,6 +20,9 @@ classifiers = [
     "Natural Language :: English",
     "Development Status :: 4 - Beta"
 ]
+
+[tool.setuptools.packages.find]
+include = ["netflix*"]
 
 [project.urls]
 homepage = "https://github.com/netflix-writers/"

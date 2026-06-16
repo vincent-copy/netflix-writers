@@ -101,7 +101,11 @@ def write_situations_csv(output_path: Path) -> None:
     print(f"CSV written to: {output_path}")
 
 
-if __name__ == "__main__":
+def main():
     path = Path(os.path.join(POLTI_DIR, "situations.csv"))
     write_situations_csv(path)
     print("-" * 40)
+
+
+if __name__ == "__main__":
+    main()
