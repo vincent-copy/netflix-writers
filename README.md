@@ -23,8 +23,9 @@ Netflix AI Greenlight Challenge: Can Data Science Predict the Next Hit Drama?
 2. Install required system packages for your operating system: [Windows](./setup/windows/setup.ps1),
    [macOS](./setup/macos/setup.sh), [Linux](./setup/linux/setup.sh)
 
-3. Initialize your environment. This includes creating and activating a Python virtual
-   environment, and then downloading data files for Netflix, IMDb and The Movie
+3. Initialize your environment by running the make commands below.
+   These will create and activate a Python virtual
+   environment, and then download data files for Netflix, IMDb and The Movie
    Database (TMDB). The final dataset will be located at `./netflix/db/netflix_enriched_dataset.csv`.
 
    **The setup process will take between 5 and 15 minutes depending on your compute
