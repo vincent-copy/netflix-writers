@@ -16,7 +16,8 @@ from pathlib import Path
 
 import duckdb
 
-from .const import DB_DIR, DB_FILE
+from netflix.const import DB_DIR, DB_FILE
+
 from .lib import cleanup, fetch_url
 
 BASE_URL = "https://datasets.imdbws.com"

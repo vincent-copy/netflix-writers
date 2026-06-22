@@ -16,7 +16,7 @@ import pandas as pd
 from rapidfuzz.distance import JaroWinkler
 from tqdm import tqdm
 
-from .const import DB_DIR, DB_FILE
+from netflix.const import DB_DIR, DB_FILE
 
 KAGGLE_PATH = Path(DB_DIR) / "kaggle"
 IMDB_PATH = Path(DB_DIR) / "imdb"

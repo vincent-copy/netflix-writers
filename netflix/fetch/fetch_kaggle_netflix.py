@@ -13,7 +13,7 @@ import os
 
 from kaggle.api.kaggle_api_extended import KaggleApi  # type: ignore[import-untyped]
 
-from .const import DB_DIR
+from netflix.const import DB_DIR
 
 KAGGLE_DIR = os.path.join(DB_DIR, "kaggle", "netflix-top-10-tv-shows-and-films")
 DATASET = "dhruvildave/netflix-top-10-tv-shows-and-films"

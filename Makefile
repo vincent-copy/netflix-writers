@@ -158,7 +158,7 @@ python-build-dataset:
 	@echo "==============================================================================="
 	@echo "Building enriched Netflix dataset from fetched data ..."
 	@echo "==============================================================================="
-	$(ACTIVATE_VENV) && python -m netflix.fetch.dataset
+	$(ACTIVATE_VENV) && python -m netflix.build.dataset
 
 
 ######################

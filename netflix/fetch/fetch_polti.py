@@ -13,7 +13,7 @@ import logging
 import os
 from pathlib import Path
 
-from .const import DB_DIR
+from netflix.const import DB_DIR
 
 POLTI_DIR = os.path.join(DB_DIR, "polti")
 logging.basicConfig(
