@@ -2,7 +2,6 @@
 Unified dataset builder for Netflix + TMDB + IMDb.
 
 Usage:
-
     $(ACTIVATE_VENV) && python -m netflix.fetch.dataset
 """
 

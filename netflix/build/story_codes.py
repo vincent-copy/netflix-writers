@@ -4,7 +4,6 @@ import json
 import logging
 import os
 
-import pandas as pd
 import requests
 
 from netflix.const import DATA_DIR
@@ -20,38 +19,22 @@ def fetch_netflix_narrative_map():
 
     # This query finds all items that are TV series, have a Netflix ID, AND have a TV Tropes ID.
     query = """
-    SELECT ?show ?showLabel ?genreLabel ?subjectLabel ?countryLabel ?languageLabel ?year ?article WHERE {
-
-  ?show wdt:P31 wd:Q5398426 .
-
-  OPTIONAL { ?show wdt:P136 ?genre . }
-
-  OPTIONAL { ?show wdt:P921 ?subject . }
-
-  OPTIONAL { ?show wdt:P495 ?country . }
-
-  OPTIONAL { ?show wdt:P364 ?language . }
-
-  OPTIONAL { ?show wdt:P571 ?inception . }
-
-  BIND(YEAR(?inception) AS ?year)
-
-  OPTIONAL {
-
-    ?article schema:about ?show ;
-
-             schema:isPartOf <https://en.wikipedia.org/> .
-
-  }
-
-  SERVICE wikibase:label {
-
-    bd:serviceParam wikibase:language "en".
-
-  }
-
+    SELECT ?show ?showLabel ?genreLabel ?subjectLabel ?countryLabel ?languageLabel ?year ?article WHERE { 
+    ?show wdt:P31 wd:Q5398426 .
+    OPTIONAL { ?show wdt:P136 ?genre . }
+    OPTIONAL { ?show wdt:P921 ?subject . }
+    OPTIONAL { ?show wdt:P495 ?country . }
+    OPTIONAL { ?show wdt:P364 ?language . }
+    OPTIONAL { ?show wdt:P571 ?inception . }
+    BIND(YEAR(?inception) AS ?year)
+    OPTIONAL {
+        ?article schema:about ?show ;
+                schema:isPartOf <https://en.wikipedia.org/> .
+    }
+    SERVICE wikibase:label {
+        bd:serviceParam wikibase:language "en".
+    }
 }
-
 LIMIT 200
     """
 
