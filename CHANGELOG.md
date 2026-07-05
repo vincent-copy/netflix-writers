@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 
 
+## [0.3.0](https://github.com/FullStackWithLawrence/netflix-writers/compare/v0.2.0...v0.3.0) (2026-07-05)
+
+### Features
+
+* add companion jupyter notebooks ([72759b2](https://github.com/FullStackWithLawrence/netflix-writers/commit/72759b23f69609a2b2e2c2dd08db7609b6b79df2))
+
 ## [0.2.0](https://github.com/FullStackWithLawrence/netflix-writers/compare/v0.1.1...v0.2.0) (2026-06-30)
 
 ### Features
