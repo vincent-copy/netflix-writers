@@ -1,17 +1,2 @@
-git remote set-url origin https://github.com/vincent-copy/netflix-writers
-
-git status
-U 未追蹤
-T 已追蹤
-S 已暫存
-C 已提交
-M 已修改
-R 已重新命名/移動路徑
-git add [name] [name] 
-git add . #git add all
-git commit
-
-git log --oneline
-git log 
-
-git push
+first line
+second line
