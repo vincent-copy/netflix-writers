@@ -1,10 +1,12 @@
 # group member !
 Vincent kuo
-Iris 
-Sean
-
-
-
+Iris  
+Sean Shen
+Jeannie LAN
+# The changes include:
+Our analysis is available under the netflix-writer.ipynb exercise;
+temp contains temporary files and Vincent's presentation notes, which can be ignored;
+the team final project is the presentation PDF.
 
 
 
