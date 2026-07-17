@@ -1,6 +1,6 @@
 # group member !
 Vincent kuo
-Iris  
+Iris Su
 Sean Shen
 Jeannie LAN
 # The changes include:
